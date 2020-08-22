@@ -6,7 +6,7 @@ Kubernetes系统组件之间通过HTTP协议通信，在不依赖任何中间件
 
 Informer运行原理图如下所示：
 
-![](client-go/Informer.png)
+![](Informer.png)
 
 在架构设计中核心组件分别如下：
 
