@@ -306,7 +306,7 @@ type Deltas []Delta
 
 DeltaFIFO 与其他队列最大的不同是，它会保存所有资源对象的操作类型，队列中会存在拥有不同操作类型的同一资源对象，消费者在处理该资源对象时能够了解该资源对象所发生的动作。DeltaFIFO 存储结构如下图所示：
 
-![](client-go/Indexer存储结构.png)
+![](Indexer存储结构.png)
 
 #### resync机制
 
@@ -335,7 +335,7 @@ func (f *DeltaFIFO) syncKeyLocked(key string) error {
 
 ThreadSafeMap 是实现并发安全的存储。它拥有Add、Update、Delete、List、Get、Replace、Resync等方法。Indexer在 ThreadSafeMap 的基础上进行了封装，它继承了 ThreadSafeMap 相关的操作方法并实现了 Indexer Func 等功能，例如 Index、IndexKeys、Get Indexers等方法，这些方法为 ThreadSafeMap 提供了索引功能，Indexer 存储结构如下图所示。
 
-![Indexer存储结构](client-go/Indexer存储结构.png)
+![Indexer存储结构](Indexer存储结构.png)
 
 #### 1. Indexer 索引器
 
@@ -358,7 +358,7 @@ type Indices map[string]Index
 
 以下是Indexer这四个重要数据结构的关系图：
 
-![](client-go/Indexer.png)
+![](Indexer.png)
 
 现在再来看下Index与索引相关接口的定义：
 
