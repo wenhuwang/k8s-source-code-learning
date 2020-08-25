@@ -306,7 +306,7 @@ type Deltas []Delta
 
 DeltaFIFO 与其他队列最大的不同是，它会保存所有资源对象的操作类型，队列中会存在拥有不同操作类型的同一资源对象，消费者在处理该资源对象时能够了解该资源对象所发生的动作。DeltaFIFO 存储结构如下图所示：
 
-![](Indexer存储结构.png)
+![](DeltaFIFO存储结构.png)
 
 #### resync机制
 
