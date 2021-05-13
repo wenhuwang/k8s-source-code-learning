@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-13T06:03:20.479Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="As36jW0GNEgEJ5SZw2Ze" version="14.6.12" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-13T06:39:21.230Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="rhKvg1zg6LSfsHCaxEAk" version="14.6.12" type="github">
   <diagram name="Page-1" id="58cdce13-f638-feb5-8d6f-7d28b1aa9fa0">
     <mxGraphModel dx="1278" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -37,21 +37,57 @@
         <mxCell id="3cde6dad864a17aa-2" value="Activity" style="rounded=1;whiteSpace=wrap;html=1;arcSize=24;fillColor=#ffffc0;strokeColor=#ff0000;shadow=0;comic=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;fontColor=#000000;align=center;" parent="2a3bc250acf0617d-7" vertex="1">
           <mxGeometry x="585" y="65" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="oNucrDUbllqK9O9aNib7-1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="382b91b5511bd0f7-1">
+        <mxCell id="oNucrDUbllqK9O9aNib7-1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="382b91b5511bd0f7-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="520" y="240" as="sourcePoint" />
-            <mxPoint x="160" y="240" as="targetPoint" />
+            <mxPoint x="130" y="240" as="targetPoint" />
             <Array as="points">
               <mxPoint x="80" y="170" />
               <mxPoint x="80" y="240" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="oNucrDUbllqK9O9aNib7-3" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+        <mxCell id="oNucrDUbllqK9O9aNib7-3" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="80" y="120" as="sourcePoint" />
-            <mxPoint x="160" y="120" as="targetPoint" />
+            <mxPoint x="130" y="120" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-1" value="&lt;span style=&quot;margin: 0px ; padding: 0px ; max-width: 100% ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; color: rgb(160 , 161 , 167) ; font-style: italic ; line-height: 26px ; box-sizing: border-box ; overflow-wrap: break-word&quot;&gt;//&amp;nbsp;实例化nginx&amp;nbsp;controller&lt;/span&gt;&lt;br style=&quot;margin: 0px ; padding: 0px ; max-width: 100% ; color: rgb(56 , 58 , 66) ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; box-sizing: border-box ; overflow-wrap: break-word&quot;&gt;&lt;span style=&quot;color: rgb(56 , 58 , 66) ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; background-color: rgb(250 , 250 , 250)&quot;&gt;&amp;nbsp;ngx&amp;nbsp;:=&amp;nbsp;controller.NewNGINXController(conf,&amp;nbsp;mc)&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="90" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="pBAqCjMGvrJcyjI5cnmh-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="240" as="sourcePoint" />
+            <mxPoint x="350" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-3" value="&lt;span style=&quot;color: rgb(56 , 58 , 66) ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; background-color: rgb(250 , 250 , 250)&quot;&gt;//&amp;nbsp;初始化syncQueue&lt;/span&gt;&lt;br style=&quot;margin: 0px ; padding: 0px ; max-width: 100% ; color: rgb(56 , 58 , 66) ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; box-sizing: border-box ; overflow-wrap: break-word&quot;&gt;&lt;span style=&quot;color: rgb(56 , 58 , 66) ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; background-color: rgb(250 , 250 , 250)&quot;&gt;&amp;nbsp;n.syncQueue&amp;nbsp;=&amp;nbsp;task.NewTaskQueue(n.syncIngress)&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="352" y="160" width="420" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="190" as="sourcePoint" />
+            <mxPoint x="540" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="470" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-5" value="NewCustomTaskQueue(syncFn, nil)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="534" y="219" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-6" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="228.5" as="sourcePoint" />
+            <mxPoint x="800" y="228.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-8" value="&lt;div&gt;&amp;amp;Queue{queue:&amp;nbsp; &amp;nbsp; &amp;nbsp; workqueue.NewRateLimitingQueue(workqueue.DefaultControllerRateLimiter()),&lt;/div&gt;&lt;div&gt;&lt;span&gt;		&lt;/span&gt;sync:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;syncFn,&lt;/div&gt;&lt;div&gt;&lt;span&gt;		&lt;/span&gt;workerDone: make(chan bool),&lt;/div&gt;&lt;div&gt;&lt;span&gt;		&lt;/span&gt;fn:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;fn,}&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="810" y="230" width="480" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
