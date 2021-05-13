@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-13T06:39:21.230Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="rhKvg1zg6LSfsHCaxEAk" version="14.6.12" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-13T07:31:59.437Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="FLvtW96kSFqjcGMmRjSj" version="14.6.12" type="github">
   <diagram name="Page-1" id="58cdce13-f638-feb5-8d6f-7d28b1aa9fa0">
     <mxGraphModel dx="1278" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -86,8 +86,35 @@
             <mxPoint x="800" y="228.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="pBAqCjMGvrJcyjI5cnmh-8" value="&lt;div&gt;&amp;amp;Queue{queue:&amp;nbsp; &amp;nbsp; &amp;nbsp; workqueue.NewRateLimitingQueue(workqueue.DefaultControllerRateLimiter()),&lt;/div&gt;&lt;div&gt;&lt;span&gt;		&lt;/span&gt;sync:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;syncFn,&lt;/div&gt;&lt;div&gt;&lt;span&gt;		&lt;/span&gt;workerDone: make(chan bool),&lt;/div&gt;&lt;div&gt;&lt;span&gt;		&lt;/span&gt;fn:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;fn,}&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-8" value="&lt;div&gt;q := &amp;amp;Queue{...,&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;sync:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;syncFn,&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;...,}&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="810" y="230" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-9" value="&lt;span style=&quot;margin: 0px ; padding: 0px ; max-width: 100% ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; text-align: left ; color: rgb(160 , 161 , 167) ; font-style: italic ; line-height: 26px ; box-sizing: border-box ; overflow-wrap: break-word&quot;&gt;//&amp;nbsp;启动controller&lt;/span&gt;&lt;br style=&quot;margin: 0px ; padding: 0px ; max-width: 100% ; color: rgb(56 , 58 , 66) ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; text-align: left ; box-sizing: border-box ; overflow-wrap: break-word&quot;&gt;&lt;span style=&quot;color: rgb(56 , 58 , 66) ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; text-align: left ; background-color: rgb(250 , 250 , 250)&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;margin: 0px ; padding: 0px ; max-width: 100% ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; text-align: left ; color: rgb(166 , 38 , 164) ; line-height: 26px ; box-sizing: border-box ; overflow-wrap: break-word&quot;&gt;go&lt;/span&gt;&lt;span style=&quot;color: rgb(56 , 58 , 66) ; font-family: &amp;#34;operator mono&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;menlo&amp;#34; , monospace ; text-align: left ; background-color: rgb(250 , 250 , 250)&quot;&gt;&amp;nbsp;ngx.Start()&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="230" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-10" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="470" as="sourcePoint" />
+            <mxPoint x="190" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-11" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="280" as="sourcePoint" />
+            <mxPoint x="240" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-12" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="400" as="sourcePoint" />
+            <mxPoint x="240" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pBAqCjMGvrJcyjI5cnmh-13" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="470" as="sourcePoint" />
+            <mxPoint x="240" y="470" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
