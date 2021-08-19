@@ -523,5 +523,5 @@ n.syncIngress() ---> n.getConfiguration() ---> n.getBackendServers() ---> n.crea
    }
    ```
 
-   针对这个问题我们也在github ingress-nginx项目提了[issues](https://github.com/kubernetes/ingress-nginx/pull/7443)以及[PR](https://github.com/kubernetes/ingress-nginx/issues/6482)等待社区合并。
+   针对这个问题我们也在github ingress-nginx项目提了[issues](https://github.com/kubernetes/ingress-nginx/issues/6482)以及[PR](https://github.com/kubernetes/ingress-nginx/pull/7443)等待社区合并。
 
