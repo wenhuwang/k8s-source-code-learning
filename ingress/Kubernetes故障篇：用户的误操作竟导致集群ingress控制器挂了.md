@@ -14,7 +14,36 @@
 
 根据之前导出的ingress yaml配置，重新创建ingress资源以复现问题，yaml配置如下所示：
 
-![](ingress-yaml.png)
+```yaml
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: aaaa
+  namespace: demo
+  labels:
+    app: aaaa
+spec:
+  tls:
+    - hosts:
+        - aaa.com
+      secretName: default-token-dn6xb
+  rules:
+    - host: aaa.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: nginx01
+              servicePort: 80
+    - host: bbb.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: nginx02
+              servicePort: 88
+
+```
 
 测试过程中发现本次故障发生条件为：
 
