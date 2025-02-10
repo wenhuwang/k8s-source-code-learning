@@ -6,7 +6,7 @@
 
 某天早晨刚上班，突然群里有很多人反馈测试环境域名访问不了了，经过一顿操作发现测试集群的ingress-nginx-controller容器状态竟然变为`CrashLoopBackOff`而且还在反复重启，我们迅速查看ingress容器日志，发现如下报错信息：
 
-![](ingress-log.png)
+![](../../images/ingress-log.png)
 
 通过日志初步定位本次问题是和域名的`ingress SSL`配置有关，为了尽快解决问题我们先把对应ingress资源备份了一下然后删掉，过了一分钟左右ingress-nginx-controller容器自动重启完就绪探针通过以后，业务系统的域名也逐渐都恢复了。
 
@@ -54,7 +54,7 @@ spec:
 
 这里带大家先分析一下ingress-nginx项目启动流程，如下图所示：
 
-![](ingress启动流程图.png)
+![](../../images/ingress启动流程图.png)
 
 #### 2.1 ingress nginx入口函数
 
