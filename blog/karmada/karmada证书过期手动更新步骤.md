@@ -50,7 +50,7 @@ E0122 08:05:23.401207       1 run.go:74] "command failed" err="unable to load co
 
 ```
 
-一键导出证书脚本源码链接：https://github.com/wenhuwang/k8s-source-code-learning/tree/main/script/download-karmada-cert
+一键导出证书脚本源码链接：https://github.com/wenhuwang/k8s-source-code-learning/tree/master/script/download-karmada-cert
 
 ##### 2. 查看原证书信息确认证书配置
 

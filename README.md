@@ -20,15 +20,3 @@
 
 ### karmada
 - [karmada证书过期手动更新](https://github.com/wenhuwang/k8s-source-code-learning/tree/master/blog/karmada/karmada证书过期手动更新步骤.md)
-
-
-
-## 参考资料
-
-client-go源码解析: https://www.qikqiak.com/k8strain/code/client-go/indexer/
-
-informer机制解析: https://juejin.im/post/6844903631787917319
-
-Informer原理: https://juejin.im/post/6860480938699472909
-
-

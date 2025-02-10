@@ -24,9 +24,9 @@ DeltaFIFO 可以分开理解，FIFO 是一个先进先出队列，拥有 Add、U
 
 Indexer 是 client-go 用来存储资源对象并自带索引功能的本地存储，Reflector 从 DeltaFIFO 中将消费出来的资源对象存储至 Indexer。Indexer 与 Etcd 集群中的数据完全保持一致。client-go 可以方便的从本地存储中读取资源数据，而无需每次远程通过 Kubernetes API Server从Etcd集群中读取。
 
-### Informer
+## 源码分析
 
-##### 1. 资源 Informer
+#### 1. 资源 Informer
 
 每一个 Kubernetes 资源都实现了一个 Informer 机制。每一个 Informer 都会实现 Informer 和 Lister 方法，例如 PodInformer，代码如下：
 
@@ -45,7 +45,7 @@ podInformer := shareInformers.Core().V1().Pods().Informer()
 NodeInformer := shareInformers.Node().V1beta1().RuntimeClasses().Informer()
 ```
 
-##### 2. Shared Informer 共享机制
+#### 2. Shared Informer 共享机制
 
 Informer 也被称为 Shared Informer，在使用 client-go 时，若同一资源的 Informer 被实例化多次，每个 Informer 使用一个Reflector，那么会运行过多相同的 ListAndWatch，导致Kuberntes API Server负载过重。
 
@@ -668,7 +668,7 @@ tre
 
 
 
-### 源码分析
+### Informer启动流程
 
 #### 1. Informer Example代码示例：
 
@@ -745,7 +745,7 @@ mars@mars:~/go/src/k8sCodingDemo$ go  run informer-demo.go
 ...
 ```
 
-##### Informer 启动流程分析
+#### 2. Informer 启动流程源码入口
 
 从示例代码 informer.run(stopCh) 作为入口点分析 Infomer 启动流程，informer.Run() 函数实现如下所示：
 
@@ -834,7 +834,7 @@ func (c *controller) Run(stopCh <-chan struct{}) {
 
 这里分两条线：r.Run() 和 c.processLoop()
 
-###### r.Run() 函数实现
+#### 3. r.Run() 函数实现
 
 我们先看一下 r.Run() 函数的实现：
 
@@ -997,7 +997,7 @@ func (f *DeltaFIFO) queueActionLocked(actionType DeltaType, obj interface{}) err
 
 
 
-###### c.processLoop() 函数实现
+#### 4. c.processLoop() 函数实现
 
 processLoop() 函数主要是循环调用了 DeltaFIFO 队列的 Pop() 函数来消费消息，当消费异常时，安全起见会重新把消息加入到 DeltaFIFO 中。
 
@@ -1095,5 +1095,10 @@ func (s *sharedIndexInformer) HandleDeltas(obj interface{}) error {
 }
 ```
 
+## 参考资料
 
+client-go源码解析: https://www.qikqiak.com/k8strain/code/client-go/indexer/
 
+informer机制解析: https://juejin.im/post/6844903631787917319
+
+Informer原理: https://juejin.im/post/6860480938699472909
