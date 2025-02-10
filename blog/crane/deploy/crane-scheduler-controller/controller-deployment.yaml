@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: crane-scheduler-controller
+  name: crane-scheduler-controller
+  namespace: crane-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crane-scheduler-controller
+  template:
+    metadata:
+      labels:
+        app: crane-scheduler-controller
+    spec:
+      serviceAccountName: crane-scheduler-controller
+      containers:
+        - name: crane-scheduler-controller
+          env:
+            - name: TZ
+              value: Asia/Shanghai
+            - name: CRANE_SYSTEM_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          command:
+            - /controller
+            - --policy-config-path=/data/policy.yaml
+            # Update to your prometheus address
+            - --prometheus-address=http://prometheus.kubesphere-monitoring-system:9090
+          image:  "gocrane/crane-scheduler-controller:main"
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /healthz
+              port: 8090
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8090
+              scheme: HTTP
+          volumeMounts:
+            - mountPath: /data
+              name: dynamic-scheduler-policy
+          resources:
+            requests:
+              cpu: 200m
+              memory: 200Mi
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+        - configMap:
+            defaultMode: 420
+            name: dynamic-scheduler-policy
+          name: dynamic-scheduler-policy
+---
