@@ -27,7 +27,7 @@
 - [Cilium BGP模式实践](https://github.com/wenhuwang/k8s-source-code-learning/blob/master/blog/cilium/Cilium%20BGP%E6%A8%A1%E5%BC%8F%E5%AE%9E%E8%B7%B5.md)
 
 #### ingress && gateway
-- [实践篇：用户误操作竟导致集群ingress控制器挂了](https://github.com/wenhuwang/k8s-source-code-learning/tree/master/blog/ingress/Kubernetes故障篇：用户的误操作竟导致集群ingress控制器挂了.md)
+- [实践篇：用户误操作竟导致集群ingress控制器挂了](https://github.com/wenhuwang/k8s-source-code-learning/tree/master/blog/ingress%26%26gateway/Kubernetes故障篇：用户的误操作竟导致集群ingress控制器挂了.md)
 - [envoy gateway源码分析](https://github.com/wenhuwang/k8s-source-code-learning/blob/master/blog/ingress%26%26gateway/envoy%20gateway%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.md)
 
 #### karmada
